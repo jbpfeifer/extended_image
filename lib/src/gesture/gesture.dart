@@ -116,6 +116,7 @@ class ExtendedImageGestureState extends State<ExtendedImageGesture>
       onScaleUpdate: handleScaleUpdate,
       onScaleEnd: handleScaleEnd,
       onDoubleTap: _handleDoubleTap,
+      onLongPress: _handleLongPress,
       child: image,
       behavior: _gestureConfig?.hitTestBehavior,
     );
@@ -216,6 +217,17 @@ class ExtendedImageGestureState extends State<ExtendedImageGesture>
       offset: Offset.zero,
       totalScale: _gestureConfig!.initialScale,
     );
+  }
+
+  void _handleLongPress() {
+    if (widget.extendedImageState.imageWidget.onLongPress != null) {
+      widget.extendedImageState.imageWidget.onLongPress!(this);
+      return;
+    }
+
+    if (!mounted) {
+      return;
+    }
   }
 
   void _handlePointerDown(PointerDownEvent pointerDownEvent) {

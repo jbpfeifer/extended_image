@@ -44,6 +44,7 @@ class ExtendedImage extends StatefulWidget {
     this.enableMemoryCache = true,
     this.clearMemoryCacheIfFailed = true,
     this.onDoubleTap,
+    this.onLongPress,
     this.initGestureConfigHandler,
     this.enableSlideOutPage = false,
     BoxConstraints? constraints,
@@ -219,6 +220,7 @@ class ExtendedImage extends StatefulWidget {
     this.enableMemoryCache = true,
     this.clearMemoryCacheIfFailed = true,
     this.onDoubleTap,
+    this.onLongPress,
     this.initGestureConfigHandler,
     this.enableSlideOutPage = false,
     BoxConstraints? constraints,
@@ -316,6 +318,7 @@ class ExtendedImage extends StatefulWidget {
     this.enableMemoryCache = true,
     this.clearMemoryCacheIfFailed = true,
     this.onDoubleTap,
+    this.onLongPress,
     this.initGestureConfigHandler,
     this.enableSlideOutPage = false,
     BoxConstraints? constraints,
@@ -407,6 +410,7 @@ class ExtendedImage extends StatefulWidget {
     this.enableMemoryCache = true,
     this.clearMemoryCacheIfFailed = true,
     this.onDoubleTap,
+    this.onLongPress,
     this.initGestureConfigHandler,
     this.enableSlideOutPage = false,
     BoxConstraints? constraints,
@@ -475,6 +479,7 @@ class ExtendedImage extends StatefulWidget {
     this.enableMemoryCache = true,
     this.clearMemoryCacheIfFailed = true,
     this.onDoubleTap,
+    this.onLongPress,
     this.initGestureConfigHandler,
     this.enableSlideOutPage = false,
     BoxConstraints? constraints,
@@ -563,6 +568,9 @@ class ExtendedImage extends StatefulWidget {
 
   ///call back of double tap  under ExtendedImageMode.gesture
   final DoubleTap? onDoubleTap;
+
+  ///call back of double tap  under ExtendedImageMode.gesture
+  final LongPress? onLongPress;
 
   ///whether cache in PaintingBinding.instance.imageCache
   final bool enableMemoryCache;

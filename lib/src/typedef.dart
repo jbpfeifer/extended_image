@@ -32,6 +32,9 @@ typedef GestureScaleAnimationCallBack = void Function(double scale);
 /// Double tap call back
 typedef DoubleTap = void Function(ExtendedImageGestureState state);
 
+/// Long press call back
+typedef LongPress = void Function(ExtendedImageGestureState state);
+
 /// Build page background when slide page
 typedef SlidePageBackgroundHandler = Color Function(
     Offset offset, Size pageSize);
